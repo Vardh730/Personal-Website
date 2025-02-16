@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu Vardhan | ERP Consultant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #111;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 120px auto 50px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        h1 {
+            font-size: 100px;
+            font-weight: 600;
+            margin: 0;
+            color: #FF5733;
+            display: inline-block;
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+        .name-title, .bio, .content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .name-title {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition-delay: 0.5s;
+        }
+        .bio {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.8;
+            margin-top: 10px;
+            transition-delay: 1s;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 50px;
+            transition-delay: 1.5s;
+        }
+        .left-column {
+            width: 48%;
+        }
+        .right-column {
+            width: 48%;
+        }
+        .section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #FF5733;
+        }
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .floating-contact, .floating-linkedin {
+            position: fixed;
+            right: 20px;
+            background-color: #FF5733;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .floating-linkedin { bottom: 90px;
+            background-color: #0077B5;
+        }
+        .floating-contact {
+            bottom: 20px;
+        }
+        .floating-contact:hover {
+            background-color: #e04e2a;
+        }
+        .floating-linkedin:hover {
+            background-color: #005582;
+        }
+        .floating-linkedin img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.querySelector(".intro h1:nth-child(1)").style.opacity = "1";
+            }, 500);
+            
+            setTimeout(() => {
+                document.querySelector(".intro h1:nth-child(2)").style.opacity = "1";
+            }, 1500);
+            
+            setTimeout(() => {
+                document.querySelector(".name-title").style.opacity = "1";
+                document.querySelector(".name-title").style.transform = "translateY(0)";
+            }, 2000);
+            
+            setTimeout(() => {
+                document.querySelector(".bio").style.opacity = "1";
+                document.querySelector(".bio").style.transform = "translateY(0)";
+            }, 2500);
+            
+            setTimeout(() => {
+                document.querySelector(".content").style.opacity = "1";
+                document.querySelector(".content").style.transform = "translateY(0)";
+            }, 3000);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1>H</h1>
+            <h1>i,</h1>
+        </div>
+        <p class="name-title">I'm Vishnu Vardhan,<br>ERP Consultant.</p>
+        <p class="bio">I design and implement scalable ERP solutions that enhance operational efficiency, streamline workflows, and drive business growth. I also provide customized reporting solutions using SQL Server and HANA to support data-driven decision-making.</p>
+        
+        <div class="content">
+            <div class="left-column">
+                <div class="section">
+                    <h2>About Me</h2>
+                    <p>As an ERP Consultant, I specialize in optimizing business operations through tailored ERP solutions. My focus is on improving efficiency, integrating systems seamlessly, and eliminating operational bottlenecks. Additionally, I provide strategic insights through advanced reporting solutions using SQL Server and HANA, helping businesses make data-driven decisions.</p>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="section">
+                    <h2>My Approach to Work</h2>
+                    <p>I work closely with cross-functional teams to gain a deep understanding of their processes, identify pain points, and develop ERP solutions that enhance productivity. My approach is collaborative, ensuring that the solutions implemented align with business objectives while improving overall system efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="https://www.linkedin.com/in/vishnuvardhan-s-824778166/" class="floating-linkedin" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+    </a>
+    <a href="mailto:vvardhan730@gmail.com" class="floating-contact">✉️</a>
+</body>
+</html>
