@@ -22,9 +22,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-        }
-        .intro {
-            display: flex;
+        display: flex;
             align-items: center;
             justify-content: flex-start;
             width: 100%;
@@ -143,15 +141,6 @@
             width: 24px;
             height: 24px;
         }
-        .footer {
-            background-color: #FF5733;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
         @media (max-width: 600px) {
             .intro {
                 flex-direction: column;
@@ -163,6 +152,10 @@
             }
             .left-column, .right-column {
                 width: 100%;
+                margin-bottom: 20px;
+            }
+            .right-column {
+                margin-top: 20px; /* Added space between sections */
             }
         }
     </style>
@@ -232,8 +225,5 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
     </a>
     <a href="mailto:vvardhan730@gmail.com" class="floating-contact">✉️</a>
-    <div class="footer">
-        Created with passion and creativity by an aspiring developer
-    </div>
 </body>
 </html>
