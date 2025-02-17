@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishnu Vardhan | ERP Consultant</title>
+    <title>Vishnu Vardhan ERP Consultant</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -16,7 +17,7 @@
         }
         .container {
             max-width: 1000px;
-            margin: 120px auto 50px;
+            margin: 100px auto 50px; /* Adjusted margin-top from 120px to 100px */
             padding: 20px;
             display: flex;
             flex-wrap: wrap;
@@ -24,7 +25,7 @@
         }
         .intro {
             display: flex;
-            align-items: center;
+           : center;
             justify-content: flex-start;
             width: 100%;
             background-color: #f5f5f5;
@@ -42,13 +43,27 @@
             opacity: 0;
             transition: opacity 1s ease-out;
         }
+        .typing-effect {
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #FF5733;
+            animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #FF5733; }
+        }
         .name-title, .bio, .content {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s ease-out, transform 1s ease-out;
         }
         .name-title {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -69,11 +84,15 @@
             margin-top: 50px;
             transition-delay: 1.5s;
         }
-        .left-column {
+        .left-column, .right-column {
             width: 48%;
         }
-        .right-column {
-            width: 48%;
+        .section {
+            background-color: #e0e0e0; /* Darker than the background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            height: 100%; /* Ensures both sections have the same height */
         }
         .section h2 {
             font-size: 22px;
@@ -100,8 +119,11 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
+            opacity: 0;
+            transition: opacity 1s ease-out, transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .floating-linkedin { bottom: 90px;
+        .floating-linkedin { 
+            bottom: 90px;
             background-color: #0077B5;
         }
         .floating-contact {
@@ -109,24 +131,40 @@
         }
         .floating-contact:hover {
             background-color: #e04e2a;
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
         }
         .floating-linkedin:hover {
             background-color: #005582;
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
         }
         .floating-linkedin img {
             width: 24px;
             height: 24px;
         }
+        .footer {
+            background-color: #FF5733;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => {
-                document.querySelector(".intro h1:nth-child(1)").style.opacity = "1";
+                const introText = document.querySelector(".intro h1");
+                introText.style.opacity = "1";
+                introText.classList.add("typing-effect");
             }, 500);
-            
+
             setTimeout(() => {
-                document.querySelector(".intro h1:nth-child(2)").style.opacity = "1";
-            }, 1500);
+                const introText = document.querySelector(".intro h1");
+                introText.style.borderRight = "none"; // Remove the blinking effect
+            }, 5000); // Match the duration of the typing effect
             
             setTimeout(() => {
                 document.querySelector(".name-title").style.opacity = "1";
@@ -142,14 +180,21 @@
                 document.querySelector(".content").style.opacity = "1";
                 document.querySelector(".content").style.transform = "translateY(0)";
             }, 3000);
+
+            setTimeout(() => {
+                document.querySelector(".floating-contact").style.opacity = "1";
+            }, 3500);
+
+            setTimeout(() => {
+                document.querySelector(".floating-linkedin").style.opacity = "1";
+            }, 4000);
         });
     </script>
 </head>
 <body>
     <div class="container">
         <div class="intro">
-            <h1>H</h1>
-            <h1>i,</h1>
+            <h1>Hi, welcome</h1>
         </div>
         <p class="name-title">I'm Vishnu Vardhan,<br>ERP Consultant.</p>
         <p class="bio">I design and implement scalable ERP solutions that enhance operational efficiency, streamline workflows, and drive business growth. I also provide customized reporting solutions using SQL Server and HANA to support data-driven decision-making.</p>
@@ -174,5 +219,6 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
     </a>
     <a href="mailto:vvardhan730@gmail.com" class="floating-contact">✉️</a>
+
 </body>
 </html>
